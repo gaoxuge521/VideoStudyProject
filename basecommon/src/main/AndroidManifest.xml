@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.elt.zl.basecommon">
+
+
+    <application>
+        <!-- 配置glie的相关信息 -->
+        <meta-data
+            android:name="com.elt.basecommon.imageloader.util.SimpleGlideModule"
+            android:value="GlideModule" />
+    </application>
+</manifest>

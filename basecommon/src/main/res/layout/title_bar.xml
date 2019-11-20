@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:layout_height="50dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/back"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/back_hui"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title"
+            android:maxLength="10"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            tools:text="标题"/>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/ll_right"
+            android:paddingRight="10dp"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_right"
+                android:textSize="18sp"
+                android:text="提交"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:id="@+id/iv_right"
+                android:visibility="gone"
+                android:src="@drawable/icon_add_hui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line_title"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/ll_left"
+            android:background="@color/backgroud_all"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

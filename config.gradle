@@ -1,0 +1,23 @@
+ext{
+    //android  sdk
+    compileSdkVersion = 28
+    buildToolsVersion  = "28.0.0"
+    minSdkVersion =  15
+    targetSdkVersion  = 28
+    versionCode = 3
+    appcompatVersion = '28.0.0'
+    versionName = "1.0.3"
+    butterknifeVersion = '7.0.1'
+    multidexVersion = '1.0.3'
+    zxingVersion = '3.3.0'
+    okgoVersion = '3.0.4'
+    wechatVersion = '5.5.6'
+    bannerVersion = '1.4.10'
+    badgeviewVersion = '1.1.3'
+    flowlayoutVersion = '1.0.1'
+    klogVersion = '1.6.0'
+    BRVAHVersion = '2.9.42'
+    gsonVersion = '2.8.5'
+    SmartRefreshLayoutVersion = '1.0.4-7'
+
+}

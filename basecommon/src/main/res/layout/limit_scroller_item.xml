@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:visibility="visible"
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="20dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/hot_recommendation"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_notice_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:textColor="#333333"
+            android:text="全总社会联络部领导莅临职旅总部..."
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:singleLine="true"
+            android:id="@+id/tv_notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#6D6D6D"
+            android:text="全总社会联络部领导莅临职旅总部..."
+            android:textSize="14sp"
+            android:lines="1"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+allprojects {
+    tasks.withType(Javadoc) {//兼容中文字符
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion" //找控件
+    implementation "com.android.support:multidex:$rootProject.ext.multidexVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.appcompatVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.appcompatVersion"
+    implementation "com.android.support:design:$rootProject.ext.appcompatVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.ext.appcompatVersion"
+    implementation "com.github.zhaokaiqiang.klog:library:$rootProject.ext.klogVersion"//log打印
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.ext.BRVAHVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.ext.SmartRefreshLayoutVersion"
+    implementation "com.google.zxing:core:$rootProject.ext.zxingVersion"
+    implementation "com.zhy:flowlayout-lib:$rootProject.ext.flowlayoutVersion"
+    implementation "q.rorbin:badgeview:$rootProject.ext.badgeviewVersion"
+    implementation "com.lzy.net:okgo:$rootProject.ext.okgoVersion"
+//    implementation "com.github.bumptech.glide:glide:3.7.0"
+//    implementation "io.reactivex:rxandroid:1.1.0"
+    implementation "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:$rootProject.ext.wechatVersion"//微信支付
+//    implementation "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+"
+    implementation "com.youth.banner:banner:$rootProject.ext.bannerVersion"  //最新版本
+}
